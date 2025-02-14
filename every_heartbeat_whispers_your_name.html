@@ -8,6 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+        /* 设置背景图片 */
         body {
             background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
@@ -18,6 +19,18 @@
             padding: 0;
         }
 
+        /* 添加透明层，使文字更清晰 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* 透明度降低一点 */
+            z-index: -1;
+        }
+
         .container {
             position: absolute;
             top: 50%;
@@ -25,7 +38,7 @@
             transform: translate(-50%, -50%);
             width: 90%;
             max-width: 800px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.6); /* 文字背景框，增强对比 */
             padding: 30px;
             border-radius: 10px;
             animation: fadeIn 2s ease-in-out;
@@ -69,14 +82,20 @@
 
     <div class="container">
         <h1>Every Heartbeat Whispers Your Name</h1>
-        <p>From September 14, 2024, until now, every moment with you has been a beautiful journey.
-        Thank you for your love, your support, and for making me believe that I am worthy of love.</p>
 
-        <p>Thinking about seeing you in May fills my heart with excitement. That day, I will hold you tightly,
-        letting all the longing from these past months melt into my embrace.</p>
+        <p>My love,</p >
 
-        <p>Though my Valentine’s gift will arrive a little late, know that my love for you is timeless.
-        Until then, my heart beats for you, counting down the days.</p>
+        <p>From the moment we met on <b>September 14, 2024</b>, until now, every step of this journey with you has been imprinted in my heart, warm and unforgettable. Thank you for always encouraging and supporting me, for helping me grow within your love, for teaching me how to love, and for making me realize that I, too, am worthy of being loved.</p >
+
+        <p>Your presence is like the morning light, illuminating my world, giving me direction when I feel lost, and strength when I feel weak. You have made me more confident, given me the courage to embrace a future I once never dared to imagine. Your every smile, your every word, is the gentlest scenery in my heart, filling my days with happiness and anticipation.</p >
+
+        <p>Of course, we’ve had our share of disagreements and misunderstandings, moments when we hurt each other unintentionally. But it is through these ups and downs that our love has become more real, teaching us how to cherish, to understand, and to love each other better. Love is not about perfection; it is about growing together, about choosing to hold on to each other through every storm.</p >
+
+        <p>Thinking about finally seeing you in <b>May</b> fills my heart with excitement and joy. That day, I will hold you tightly and let all the longing from these past months melt into my embrace, so you can feel that my love has never faded because of the distance. Instead, with each passing day, it has only grown deeper.</p >
+
+        <p>This Valentine’s Day, I may not be able to hand you my gift in person, but please wait just a little longer—it will arrive, carrying all my love and thoughts for you. I hope that when you receive it, you’ll feel the warmth of my heart, knowing that no matter where I am, my heart beats for you, misses you every day, and eagerly awaits the moment we can be together again.</p >
+
+        <p><b>May our love remain as passionate as ever, and may our hearts stay connected across any distance.</b></p >
 
         <div class="countdown">
             Time until we meet: <span id="timer"></span>
