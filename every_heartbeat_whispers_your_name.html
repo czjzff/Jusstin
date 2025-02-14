@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Heartbeat Whispers Your Name</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .countdown {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .sender {
+            font-size: 20px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Every Heartbeat Whispers Your Name</h1>
+        <p>From September 14, 2024, until now, every moment with you has been a beautiful journey.
+        Thank you for your love, your support, and for making me believe that I am worthy of love.</p>
+
+        <p>Thinking about seeing you in May fills my heart with excitement. That day, I will hold you tightly,
+        letting all the longing from these past months melt into my embrace.</p>
+
+        <p>Though my Valentine’s gift will arrive a little late, know that my love for you is timeless.
+        Until then, my heart beats for you, counting down the days.</p>
+
+        <div class="countdown">
+            Time until we meet: <span id="timer"></span>
+        </div>
+
+        <div class="sender">
+            From: Silly Goose <br>
+            To: Amy Riley
+        </div>
+        
+        <footer>Forever yours, Silly Goose</footer>
+    </div>
+
+    <script>
+        function countdown() {
+            var futureDate = new Date("May 1, 2025 00:00:00").getTime();
+            var now = new Date().getTime();
+            var distance = futureDate - now;
+            
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("timer").innerHTML = days + " days left";
+        }
+        
+        countdown();
+        setInterval(countdown, 1000);
+    </script>
+
+</body>
+</html>
